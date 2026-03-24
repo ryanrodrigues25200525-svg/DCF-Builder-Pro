@@ -1,0 +1,42 @@
+{
+  "name": "dcf-builder",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "next dev -p 3000",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:e2e:dcf-flow": "playwright test e2e/company-flow.spec.ts --project=chromium --reporter=line"
+  },
+  "dependencies": {
+    "@tanstack/react-query": "5.95.2",
+    "clsx": "^2.1.1",
+    "framer-motion": "^12.38.0",
+    "fuse.js": "^7.1.0",
+    "lucide-react": "^0.577.0",
+    "next": "16.2.1",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "recharts": "^3.8.0",
+    "tailwind-merge": "^3.5.0",
+    "yahoo-finance2": "^3.13.2"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.58.2",
+    "@tailwindcss/postcss": "^4.2.2",
+    "@types/node": "^25.5.0",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "concurrently": "^9.2.1",
+    "eslint": "^9",
+    "eslint-config-next": "16.2.1",
+    "playwright": "^1.58.2",
+    "tailwindcss": "^4.2.2",
+    "typescript": "^5",
+    "vitest": "4.1.1"
+  }
+}

@@ -1,0 +1,17 @@
+
+# Ruff configuration
+target-version = "py310"
+line-length = 88
+exclude = ["tests", "scripts", "data"]
+
+[lint]
+# Enable:
+# Pyflakes (F)
+# pycodestyle (E, W)
+# isort (I)
+# flake8-print (T20) - Bans print statements
+select = ["F", "E", "W", "I", "T20"]
+
+# Ignore:
+# E501 (line too long) - let black handle formatting
+ignore = ["E501"]

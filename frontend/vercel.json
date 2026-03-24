@@ -1,0 +1,9 @@
+{
+  "framework": "nextjs",
+  "cleanUrls": true,
+  "git": {
+    "deploymentEnabled": {
+      "main": true
+    }
+  }
+}

@@ -1,0 +1,15 @@
+edgartools==5.25.1
+yfinance==1.2.0
+fastapi==0.135.2
+uvicorn==0.42.0
+pydantic==2.12.5
+pydantic-settings==2.13.1
+python-multipart==0.0.22
+python-dotenv==1.2.2
+httpx==0.28.1
+pandas==3.0.1
+cachetools==7.0.5
+aiosqlite==0.22.1
+openpyxl==3.1.5
+defusedxml==0.7.1
+lxml==6.0.2

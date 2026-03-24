@@ -1,0 +1,21 @@
+{
+    "name": "dcf-builder-root",
+    "version": "1.0.0",
+    "private": true,
+    "scripts": {
+        "dev": "concurrently -n \"frontend,backend\" -c \"bgBlue,bgGreen\" \"npm run dev:frontend\" \"npm run dev:backend\"",
+        "dev:frontend": "cd frontend && npm run dev",
+    "dev:backend": "cd backend && ( [ -f .venv/bin/python ] && .venv/bin/python -m uvicorn main:app --host 0.0.0.0 --port 8000 --reload || [ -n \"$VIRTUAL_ENV\" ] && $VIRTUAL_ENV/bin/python -m uvicorn main:app --host 0.0.0.0 --port 8000 --reload || python3 -m uvicorn main:app --host 0.0.0.0 --port 8000 --reload )",
+    "security:scan": "bash ./scripts/security_scan.sh",
+    "install:all": "npm install --prefix frontend && (cd backend && python3 -m venv venv && source venv/bin/activate && pip install -r requirements.txt)",
+    "build:frontend": "npm run build --prefix frontend",
+    "lint:frontend": "npm run lint --prefix frontend",
+    "test:frontend": "npm run test --prefix frontend",
+    "test:e2e:dcf-flow": "npm run test:e2e:dcf-flow --prefix frontend",
+    "test:backend": "cd backend && python3 -m pytest -q",
+    "verify": "npm run lint:frontend && npm run test:frontend && npm run build:frontend && npm run test:backend"
+    },
+    "devDependencies": {
+        "concurrently": "^9.2.1"
+    }
+}
